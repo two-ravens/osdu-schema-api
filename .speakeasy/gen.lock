@@ -1,0 +1,150 @@
+lockVersion: 2.0.0
+id: d171669d-6215-4acc-85c0-d23ef31e4fbd
+management:
+  docChecksum: bd87ee76282894276414c8e258e17472
+  docVersion: "1.0"
+  speakeasyVersion: 1.409.0
+  generationVersion: 2.429.0
+  releaseVersion: 0.0.1
+  configChecksum: e78b720f8c05dc2f5dddefb31c1cb6cd
+features:
+  go:
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.6
+    core: 3.5.12
+    defaultEnabledRetries: 0.2.0
+    envVarSecurityUsage: 0.3.1
+    flattening: 2.81.1
+    globalSecurity: 2.82.10
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.2
+    intellisenseMarkdownSupport: 0.1.0
+    responseFormat: 0.1.2
+    retries: 2.83.0
+    sdkHooks: 0.1.0
+generatedFiles:
+  - .gitattributes
+  - /models/components/connectedouterservice.go
+  - /models/components/httpmetadata.go
+  - /models/components/schemaidentity.go
+  - /models/components/schemainfo.go
+  - /models/components/schemainforesponse.go
+  - /models/components/schemarequest.go
+  - /models/components/security.go
+  - /models/components/versioninfo.go
+  - /models/operations/createschema.go
+  - /models/operations/getschema.go
+  - /models/operations/getschemainfolist.go
+  - /models/operations/info.go
+  - /models/operations/livenesscheck.go
+  - /models/operations/upsertschema.go
+  - /models/operations/upsertsystemschema.go
+  - CONTRIBUTING.md
+  - USAGE.md
+  - docs/models/components/connectedouterservice.md
+  - docs/models/components/httpmetadata.md
+  - docs/models/components/schema.md
+  - docs/models/components/schemaidentity.md
+  - docs/models/components/schemainfo.md
+  - docs/models/components/schemainforesponse.md
+  - docs/models/components/schemarequest.md
+  - docs/models/components/schemascope.md
+  - docs/models/components/schemastatus.md
+  - docs/models/components/security.md
+  - docs/models/components/versioninfo.md
+  - docs/models/operations/createschemaresponse.md
+  - docs/models/operations/getschemainfolistrequest.md
+  - docs/models/operations/getschemainfolistresponse.md
+  - docs/models/operations/getschemarequest.md
+  - docs/models/operations/getschemaresponse.md
+  - docs/models/operations/getschemaresponsebody.md
+  - docs/models/operations/inforesponse.md
+  - docs/models/operations/livenesscheckresponse.md
+  - docs/models/operations/option.md
+  - docs/models/operations/upsertschemaresponse.md
+  - docs/models/operations/upsertsystemschemaresponse.md
+  - docs/sdks/healthcheckapi/README.md
+  - docs/sdks/info/README.md
+  - docs/sdks/schemaapi/README.md
+  - docs/sdks/sdk/README.md
+  - docs/sdks/systemschemaapi/README.md
+  - go.mod
+  - healthcheckapi.go
+  - info.go
+  - internal/hooks/hooks.go
+  - internal/utils/contenttype.go
+  - internal/utils/form.go
+  - internal/utils/headers.go
+  - internal/utils/json.go
+  - internal/utils/pathparams.go
+  - internal/utils/queryparams.go
+  - internal/utils/requestbody.go
+  - internal/utils/retries.go
+  - internal/utils/security.go
+  - internal/utils/utils.go
+  - models/operations/options.go
+  - models/sdkerrors/sdkerror.go
+  - retry/config.go
+  - schemaapi.go
+  - sdk.go
+  - systemschemaapi.go
+  - types/bigint.go
+  - types/date.go
+  - types/datetime.go
+  - types/decimal.go
+  - types/pointers.go
+examples:
+  upsertSystemSchema:
+    speakeasy-default-upsert-system-schema:
+      requestBody:
+        application/json: {"schemaInfo": {"schemaIdentity": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}, "createdBy": "user@opendes.com", "dateCreated": "2019-05-23T11:16:03Z", "status": "PUBLISHED", "scope": "INTERNAL", "supersededBy": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}}}
+      responses:
+        "200":
+          '*/*': "0x905D3e2Eb0"
+  getSchemaInfoList:
+    "":
+      parameters:
+        query:
+          authority: "osdu"
+          source: "wks"
+          entityType: "wellbore"
+          schemaVersionMajor: "1"
+          schemaVersionMinor: "1"
+          schemaVersionPatch: "0"
+          status: "PUBLISHED"
+          scope: "INTERNAL"
+          latestVersion: "True"
+          limit: "10"
+          offset: "0"
+      responses:
+        "200":
+          '*/*': "0xdaa3AE483a"
+  upsertSchema:
+    speakeasy-default-upsert-schema:
+      requestBody:
+        application/json: {"schemaInfo": {"schemaIdentity": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}, "createdBy": "user@opendes.com", "dateCreated": "2019-05-23T11:16:03Z", "status": "PUBLISHED", "scope": "INTERNAL", "supersededBy": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}}}
+      responses:
+        "200":
+          '*/*': "0x45F7Db4dAC"
+  createSchema:
+    speakeasy-default-create-schema:
+      requestBody:
+        application/json: {"schemaInfo": {"schemaIdentity": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}, "createdBy": "user@opendes.com", "dateCreated": "2019-05-23T11:16:03Z", "status": "PUBLISHED", "scope": "INTERNAL", "supersededBy": {"authority": "osdu", "source": "wks", "entityType": "wellbore", "schemaVersionMajor": 1, "schemaVersionMinor": 1, "schemaVersionPatch": 0, "id": "osdu:wks:wellbore:1.0.0"}}}
+      responses:
+        "201":
+          '*/*': "0xB683E7D5e5"
+  getSchema:
+    "":
+      parameters:
+        path:
+          id: "osdu:wks:wellbore:1.0.0"
+      responses:
+        "200":
+          '*/*': "0x5BF5a33Cfe"
+  livenessCheck:
+    speakeasy-default-liveness-check:
+      responses:
+        "200":
+          '*/*': "<value>"
+  info: {}

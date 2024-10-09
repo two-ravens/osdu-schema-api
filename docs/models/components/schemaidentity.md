@@ -1,0 +1,16 @@
+# SchemaIdentity
+
+Schema authority source and type description
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     | Example                                                         |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `Authority`                                                     | *string*                                                        | :heavy_check_mark:                                              | Entity authority                                                | osdu                                                            |
+| `Source`                                                        | *string*                                                        | :heavy_check_mark:                                              | Entity source                                                   | wks                                                             |
+| `EntityType`                                                    | *string*                                                        | :heavy_check_mark:                                              | EntityType Code                                                 | wellbore                                                        |
+| `SchemaVersionMajor`                                            | *int64*                                                         | :heavy_check_mark:                                              | Major Schema Version Number                                     | 1                                                               |
+| `SchemaVersionMinor`                                            | *int64*                                                         | :heavy_check_mark:                                              | Minor Schema Version Number                                     | 1                                                               |
+| `SchemaVersionPatch`                                            | *int64*                                                         | :heavy_check_mark:                                              | Patch Schema Version Number                                     | 0                                                               |
+| `ID`                                                            | **string*                                                       | :heavy_minus_sign:                                              | A read-only system defined id used for referencing of a schema. | osdu:wks:wellbore:1.0.0                                         |
